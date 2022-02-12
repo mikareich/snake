@@ -1,0 +1,8 @@
+body {
+  display: grid;
+  place-content: center;
+}
+
+#gameScreen {
+  border: 1px solid black;
+}
