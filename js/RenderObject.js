@@ -6,7 +6,7 @@ class RenderObject {
     this.height = height;
     this.position = position;
 
-    this.backgroundColor = styles?.backgroundColor || "red";
+    this.backgroundColor = styles?.backgroundColor || "black";
   }
 
   draw(ctx) {

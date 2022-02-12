@@ -8,8 +8,15 @@ class Game {
 
     this.renderer = new Renderer(width, height, ctx);
 
+    this.state = "paused";
     this.tickSpeedMultiplier = 1;
     this.gameObjects = [];
+    this.score = 0;
+    this.timePlaying = 0;
+  }
+
+  togglePause() {
+    this.state = this.state === "paused" ? "running" : "paused";
   }
 
   get tickSpeed() {
@@ -20,8 +27,13 @@ class Game {
     this.renderer.draw(...this.getRenderObjects());
   }
 
-  update() {
-    this.gameObjects.forEach((gameObject) => gameObject.update(this));
+  update(deltaTime) {
+    if (this.state === "running") {
+      this.timePlaying += deltaTime;
+      this.gameObjects.forEach((gameObject) => gameObject.update(this));
+      // update score
+      this.score += Math.round(deltaTime / 10);
+    }
   }
 
   getRenderObjects() {

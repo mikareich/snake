@@ -3,6 +3,6 @@ body {
   place-content: center;
 }
 
-#gameScreen {
+#game-screen {
   border: 1px solid black;
 }

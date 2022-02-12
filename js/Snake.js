@@ -29,7 +29,8 @@ class Snake {
     const part = new RenderObject(
       this.PART_SIZE.width,
       this.PART_SIZE.height,
-      position
+      position,
+      { backgroundColor: firstPart ? "black" : "green" }
     );
 
     this.parts.push(part);

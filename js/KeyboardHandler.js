@@ -1,19 +1,31 @@
+const whenRunning = (game, cb) => {
+  if (game.state === "running") cb();
+};
+
 const defaultKeyboardConfiguration = [
   {
     keyCode: [87, 38],
-    action: ({ snake }) => (snake.direction = "up"),
+    action: ({ snake, game }) =>
+      whenRunning(game, () => (snake.direction = "up")),
   },
   {
     keyCode: [83, 40],
-    action: ({ snake }) => (snake.direction = "down"),
+    action: ({ snake, game }) =>
+      whenRunning(game, () => (snake.direction = "down")),
   },
   {
     keyCode: [65, 37],
-    action: ({ snake }) => (snake.direction = "left"),
+    action: ({ snake, game }) =>
+      whenRunning(game, () => (snake.direction = "left")),
   },
   {
     keyCode: [68, 39],
-    action: ({ snake }) => (snake.direction = "right"),
+    action: ({ snake, game }) =>
+      whenRunning(game, () => (snake.direction = "right")),
+  },
+  {
+    keyCode: [32],
+    action: ({ game }) => game.togglePause(),
   },
 ];
 
