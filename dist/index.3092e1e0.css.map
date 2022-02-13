@@ -1,0 +1,1 @@
+{"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","sources":["src/css/index.css"],"sourcesContent":["body {\n  display: grid;\n  place-content: center;\n}\n\n#game-screen {\n  border: 1px solid black;\n}\n"],"names":[],"version":3,"file":"index.3092e1e0.css.map","sourceRoot":"/__parcel_source_root/"}

@@ -1,0 +1,10 @@
+body {
+  display: grid;
+  place-content: center;
+}
+
+#game-screen {
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=index.3092e1e0.css.map */
